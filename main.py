@@ -15,8 +15,6 @@ def main(words_near_list, distance, start_date, end_date, save_as_txt, print_exc
     year = False
     file_output_counter = 0
     searchterms_output_counter = 0
-    total_words = 0
-    datarows = []
     start_txt_file({"words_near_list": words_near_list, "distance": distance, "start_date": start_date, "end_date":
                     end_date,"fuzziness": fuzziness}, save_as_txt)
 
