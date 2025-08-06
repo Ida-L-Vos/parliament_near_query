@@ -8,7 +8,7 @@ distance = 100
 start_date = "1814-00-00"
 end_date = "1899-00-00"
 # Input False (much faster) or a value below 100, for what percentage match it must be to be considered a close enough match
-fuzziness = {'vrij verklaard': 93, 'regel': 83, 'reglement': 83, 'geboren': 83, 'kinderen': 83, 'gebooren': 83, 'vrijverklaring': 83, 'vrij verklaren': 83, 'baarmoeder': 83, 'emancipatie': 80, 'parlement': 80, 'tweede kamer': 80, 'eerste kamer': 80, 'maatregel': 80, 'slavinnen': 80, "zuigeling": 80, "lijfeigen":80, "negro":80}
+fuzziness = {'vrij verklaard': 93,  'geboren': 83, 'kinderen': 83, 'gebooren': 83, 'vrijverklaring': 83, 'vrij verklaren': 83, 'baarmoeder': 83, 'emancipatie': 80, 'slavinnen': 80, "zuigeling": 80, "lijfeigen":80, "negro":80}
 #say True if you want to print an excerpt. If using index_word_count, excerpt will focus on first tuple in the key in index_word_count if that tuple is longer than 1 item
 print_excerpt = True
 #specifies the minimum length of the excerpt you want printed
@@ -18,6 +18,6 @@ length_excerpt = 500
 # when you want to save your output to txt, put the name of the txt file you want here
 save_as_txt = "output.txt"
 #input the directory that has the parliamentary documents
-directory = "../Parliamentary_debates/Handelingen"
+directory = "../NL parliamentary documents"
 
 main(words_near_list, distance, start_date, end_date, save_as_txt, print_excerpt, length_excerpt, fuzziness, directory)
