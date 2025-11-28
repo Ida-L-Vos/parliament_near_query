@@ -3,7 +3,7 @@ This repository contains the Python code to execute a query on Dutch parliamenta
 
 The code also allows you to work with fuziness; depending on your value for fuzziness, words don't have to match exactly. This is intended to deal with OCR issues, but can also be used in other ways. For instance, the code is currently set to allow a fuziness of 93 for "vrij verklaard", this means that something like "vrjj verklaard" will also work.
 
-I report the occasional use of ChatGPT for aid in writing this code.
+I report the occasional use of ChatGPT for help with writing this code.
 
 ## Getting started
 ### Prerequisites
