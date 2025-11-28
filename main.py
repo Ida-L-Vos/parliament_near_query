@@ -7,9 +7,6 @@ def main(words_near_list, distance, start_date, end_date, save_as_txt, print_exc
                                                                        save_as_txt)  # getting the formatting right
     check_validity_of_input(start_date, end_date, fuzziness, words_near_list)
     possible_files, vergaderjaren_unspecified_dates = list_of_debates(start_date, end_date)
-
-
-
     search_terms = make_list_of_search_terms(words_near_list)  # puts all relevant n-grams in one list
     words_near_list = clean_words_near_list(words_near_list)  # replaces spaces with _ in the query input
     year = False
@@ -41,8 +38,12 @@ def main(words_near_list, distance, start_date, end_date, save_as_txt, print_exc
 
         # saving the output in the text file
         if save_as_txt:
-            with open(save_as_txt, 'a') as f:
-                f.write(printable)
+            try:
+                with open(save_as_txt, 'a') as f:
+                    f.write(printable)
+            except UnicodeEncodeError:
+                with open(save_as_txt, 'a', encoding="utf8") as f:
+                    f.write(printable)
 
         file_output_counter += 1
         print(file_output_counter)

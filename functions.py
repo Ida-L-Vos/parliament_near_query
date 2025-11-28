@@ -158,7 +158,7 @@ def clean_words_near_list(words_near_list):
 	new_words_near_list = []
 	for categorie in words_near_list:
 		categorie = str_to_list(categorie)
-		categorie = [item.replace(" ", "_").upper() for item in categorie]
+		categorie = [item.upper() for item in categorie]
 		new_words_near_list.append(categorie)
 	words_near_list = new_words_near_list
 	return words_near_list
